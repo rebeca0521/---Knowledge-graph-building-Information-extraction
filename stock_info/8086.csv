@@ -1,0 +1,6 @@
+,From,to,relation
+0,8086,93,price
+1,8086,4985,volume
+2,8086,94.9,opening
+3,8086,95.4,highest price
+4,8086,93,lowest price
