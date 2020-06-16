@@ -19,7 +19,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-# In[ ]:
+# In[2]:
 
 
 # Initial Flask app
@@ -49,13 +49,15 @@ def reply_handler(bot, update):
         if text in d_l:
             text=text.split("/")[1]
             chat_id = update.message.chat_id
+            update.message.reply_text('以下是最近一個月和'+text+'最相關的top5股票：')
             bot.send_photo(chat_id=chat_id, photo=open(str(text)+'.png', 'rb'))
+            
 
         else:
             update.message.reply_text('I don\'t know what u want')
             
 
-            
+
 updater = Updater(token='1151794661:AAGbQ1sM7_XwhKfz8sw6aWBjVyX5q_DDdRY')
 
 
